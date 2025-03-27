@@ -67,4 +67,34 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 0.9rem;
-    min-width
+    min-width : 100px;
+    touch-action: manipulation;
+}
+
+.clear-button {
+    background-color: #dc3545;
+}
+
+.clear-button:hover {
+    background-color: #c82333;
+}
+
+.calculate-button {
+    background-color: #007bff;
+}
+
+.calculate-button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 20px auto;
+}
