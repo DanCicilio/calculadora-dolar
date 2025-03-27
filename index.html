@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DanCicilio -> Calculadora para Dólar Futuro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>DanCicilio -> Justo para Dólar Futuro</h1>
+    <form id="calcForm">
+        <div class="input-group">
+            <label for="diFuturo"><a href="https://br.tradingview.com/symbols/BMFBOVESPA-DI11!/" target="_blank">DI FUTURO:</a></label>
+            <input type="text" id="diFuturo" name="diFuturo" placeholder="00,000" required onblur="formatDiFuturo(this)">
+            <button type="button" class="clear-button" onclick="clearField('diFuturo')">Limpar</button>
+        </div>
+        <!-- Adicione os outros campos de entrada aqui -->
+        <button type="button" id="calculateButton" class="calculate-button">Calcular</button>
+        <button type="button" id="clearButton" class="clear-button">Limpar Tudo</button>
+        <div class="input-group" id="ptaxGroup" style="display: none;">
+            <label for="ptax">PTAX:</label>
+            <input type="text" id="ptax" name="ptax" placeholder="0.000,00" required onblur="formatCurrency(this)">
+            <button type="button" class="calculate-ptax-button" onclick="calcularPTAX()">Calcular PTAX</button>
+            <button type="button" class="clear-button" onclick="clearField('ptax')">Limpar</button>
+        </div>
+    </form>
+    <div class="result" id="result"></div>
+    <script src="script.js"></script>
+</body>
+</html>
